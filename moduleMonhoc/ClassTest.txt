@@ -118,3 +118,28 @@ Test Case 14, Test Add A Subject In Advanced Menu, input right subject name
 	Select from list subjectMiThuat
 	Click Button To Add Subject
 	Success Add Subject
+
+Test Case 15, Test Add A Subject In Advanced Menu, not input subject name
+	Select Classes To View Details
+	Select Subject per Classes
+	Click Button Advanced Menu
+	Select from list subjectSinhHoc
+	Click Button To Add Subject
+	Err not input subject name
+
+Test Case 16, Test Change Agenda of a Subject, use default system lists
+	Select Classes To View Details
+	Select Subject per Classes
+	Select to Change Subject Agenda	21193
+	Select System Agenda	21193
+	Click Button Submit Change Agenda
+	Success Change Agenda 	21193
+
+Test Case 17, Test Change Agenda of a Subject, use school lists
+	Select Classes To View Details
+	Select Subject per Classes
+	Select to Change Subject Agenda	21193
+	Select School Agenda	21193
+	Click Button Submit Change Agenda
+	Success Change Agenda 	21193
+	

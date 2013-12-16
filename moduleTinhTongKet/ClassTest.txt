@@ -1,0 +1,19 @@
+*** Settings ***
+
+Resource	Keyword.txt
+
+*** Testcases ***
+Login Should Succeed When the Correct Username and Password are Entered
+	Login
+Test Case2 One subject is no data
+	Upload no data file for subject Ngu Van need update
+	Select Classes To View Details
+	Select Sum up Page
+	Select Button Sum Up
+	Page should contain POP UP con 15 hoc sinh chua du diem
+Test Case3 Full data
+	Upload full data file for subject Ngu Van not need update
+	Select Classes To View Details
+	Select Sum up Page
+	Select Button Sum Up
+	Page should contain POP UP da co du diem va hanh kiem cua ca lop

@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20131216 04:55:09.808" generator="Robot 2.8.3 (Python 2.7.6 on win32)">
+<suite source="C:\Users\FreeSky\Desktop\Test KT\ClassTest.txt" id="s1" name="ClassTest">
+<test id="s1-t1" name="Login Should Succeed When the Correct Username and Password are Entered">
+<kw type="kw" name="Keyword.Login">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN ADDRESS}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20131216 04:55:09.989" level="INFO">Opening browser 'ff' to base url 'http://truongnha.com/login/'</msg>
+<status status="PASS" endtime="20131216 04:55:15.124" starttime="20131216 04:55:09.988"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id_username</arg>
+<arg>tungvn</arg>
+</arguments>
+<msg timestamp="20131216 04:55:15.125" level="INFO">Typing text 'tungvn' into text field 'id_username'</msg>
+<status status="PASS" endtime="20131216 04:55:15.247" starttime="20131216 04:55:15.125"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id_password</arg>
+<arg>nhom14</arg>
+</arguments>
+<msg timestamp="20131216 04:55:15.248" level="INFO">Typing text 'nhom14' into text field 'id_password'</msg>
+<status status="PASS" endtime="20131216 04:55:15.313" starttime="20131216 04:55:15.247"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20131216 04:55:15.314" level="INFO">Clicking button 'login'.</msg>
+<status status="PASS" endtime="20131216 04:55:17.153" starttime="20131216 04:55:15.313"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Location Should Be">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${WELCOME PAGE}</arg>
+</arguments>
+<msg timestamp="20131216 04:55:17.161" level="INFO">Current location is 'http://truongnha.com/school/'.</msg>
+<status status="PASS" endtime="20131216 04:55:17.161" starttime="20131216 04:55:17.153"></status>
+</kw>
+<status status="PASS" endtime="20131216 04:55:17.162" starttime="20131216 04:55:09.987"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20131216 04:55:17.163" critical="yes" starttime="20131216 04:55:09.985"></status>
+</test>
+<test id="s1-t2" name="Test Case2 One subject is no data">
+<kw type="kw" name="Keyword.Upload no data file for subject Ngu Van need update">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/school/viewClassDetail/1502</arg>
+</arguments>
+<msg timestamp="20131216 04:55:17.166" level="INFO">Clicking link '/school/viewClassDetail/1502'.</msg>
+<status status="PASS" endtime="20131216 04:55:17.936" starttime="20131216 04:55:17.165"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>btn-diem</arg>
+</arguments>
+<msg timestamp="20131216 04:55:17.937" level="INFO">Clicking link 'btn-diem'.</msg>
+<status status="PASS" endtime="20131216 04:55:18.743" starttime="20131216 04:55:17.936"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Select From List">
+<doc>Selects `*items` from list identified by `locator`</doc>
+<arguments>
+<arg>subject</arg>
+<arg>21198</arg>
+</arguments>
+<msg timestamp="20131216 04:55:18.744" level="INFO">Selecting option(s) '21198' from list 'subject'.</msg>
+<status status="PASS" endtime="20131216 04:55:19.658" starttime="20131216 04:55:18.744"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>mark-menu</arg>
+</arguments>
+<msg timestamp="20131216 04:55:19.659" level="INFO">Clicking link 'mark-menu'.</msg>
+<status status="PASS" endtime="20131216 04:55:19.765" starttime="20131216 04:55:19.659"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>import</arg>
+</arguments>
+<msg timestamp="20131216 04:55:19.766" level="INFO">Clicking link 'import'.</msg>
+<status status="PASS" endtime="20131216 04:55:19.847" starttime="20131216 04:55:19.765"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>upload_modal</arg>
+</arguments>
+<status status="PASS" endtime="20131216 04:55:20.089" starttime="20131216 04:55:19.847"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Choose File">
+<doc>Inputs the `file_path` into file input field found by `identifier`.</doc>
+<arguments>
+<arg>files[]</arg>
+<arg>C:\\Users\\FreeSky\\Desktop\\Test KT${/}bangdiem10A1nodata.xls</arg>
+</arguments>
+<status status="PASS" endtime="20131216 04:55:20.190" starttime="20131216 04:55:20.089"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Tải lên</arg>
+</arguments>
+<status status="PASS" endtime="20131216 04:55:20.225" starttime="20131216 04:55:20.191"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id='fileupload']/table/tbody/tr/td[5]/button</arg>
+</arguments>
+<msg timestamp="20131216 04:55:20.226" level="INFO">Clicking button 'xpath=//*[@id='fileupload']/table/tbody/tr/td[5]/button'.</msg>
+<status status="PASS" endtime="20131216 04:55:20.359" starttime="20131216 04:55:20.226"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Cập nhật</arg>
+</arguments>
+<status status="PASS" endtime="20131216 04:55:21.003" starttime="20131216 04:55:20.359"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>update</arg>
+</arguments>
+<msg timestamp="20131216 04:55:21.004" level="INFO">Clicking button 'update'.</msg>
+<status status="PASS" endtime="20131216 04:55:21.094" starttime="20131216 04:55:21.004"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>upload-modal-exit</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20131216 04:55:21.124" starttime="20131216 04:55:21.094"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>upload-modal-exit</arg>
+</arguments>
+<msg timestamp="20131216 04:55:21.124" level="INFO">Clicking link 'upload-modal-exit'.</msg>
+<status status="PASS" endtime="20131216 04:55:21.213" starttime="20131216 04:55:21.124"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Browser Implicit Wait">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20131216 04:55:21.247" starttime="20131216 04:55:21.213"></status>
+</kw>
+<status status="PASS" endtime="20131216 04:55:21.248" starttime="20131216 04:55:17.165"></status>
+</kw>
+<kw type="kw" name="Keyword.Select Classes To View Details">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/school/viewClassDetail/1502</arg>
+</arguments>
+<msg timestamp="20131216 04:55:21.250" level="INFO">Clicking link '/school/viewClassDetail/1502'.</msg>
+<status status="PASS" endtime="20131216 04:55:24.199" starttime="20131216 04:55:21.250"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Location Should Be">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${HOST}/school/viewClassDetail/1502</arg>
+</arguments>
+<msg timestamp="20131216 04:55:24.226" level="INFO">Current location is 'http://truongnha.com/school/viewClassDetail/1502'.</msg>
+<status status="PASS" endtime="20131216 04:55:24.226" starttime="20131216 04:55:24.200"></status>
+</kw>
+<status status="PASS" endtime="20131216 04:55:24.226" starttime="20131216 04:55:21.248"></status>
+</kw>
+<kw type="kw" name="Keyword.Select Sum Up Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>btn-tongket</arg>
+</arguments>
+<msg timestamp="20131216 04:55:24.228" level="INFO">Clicking link 'btn-tongket'.</msg>
+<status status="PASS" endtime="20131216 04:55:25.073" starttime="20131216 04:55:24.227"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Location Should Be">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${HOST}/school/xepLoaiHlTheoLop/1502/1</arg>
+</arguments>
+<msg timestamp="20131216 04:55:25.108" level="INFO">Current location is 'http://truongnha.com/school/xepLoaiHlTheoLop/1502/1'.</msg>
+<status status="PASS" endtime="20131216 04:55:25.108" starttime="20131216 04:55:25.073"></status>
+</kw>
+<status status="PASS" endtime="20131216 04:55:25.108" starttime="20131216 04:55:24.227"></status>
+</kw>
+<kw type="kw" name="Keyword.Select Button Sum Up">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>tinhtrungbinh</arg>
+</arguments>
+<msg timestamp="20131216 04:55:25.109" level="INFO">Clicking link 'tinhtrungbinh'.</msg>
+<status status="PASS" endtime="20131216 04:55:26.073" starttime="20131216 04:55:25.109"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Location Should Be">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${HOST}/school/xepLoaiHlTheoLop/1502/1/1</arg>
+</arguments>
+<msg timestamp="20131216 04:55:26.117" level="INFO">Current location is 'http://truongnha.com/school/xepLoaiHlTheoLop/1502/1/1'.</msg>
+<status status="PASS" endtime="20131216 04:55:26.117" starttime="20131216 04:55:26.074"></status>
+</kw>
+<status status="PASS" endtime="20131216 04:55:26.117" starttime="20131216 04:55:25.108"></status>
+</kw>
+<kw type="kw" name="Keyword.Page should contain POP UP con 15 hoc sinh chua du diem">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Element Should Contain">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>id=notify1</arg>
+<arg>Còn 15 học sinh chưa đủ điểm</arg>
+</arguments>
+<msg timestamp="20131216 04:55:26.119" level="INFO">Verifying element 'id=notify1' contains text 'Còn 15 học sinh chưa đủ điểm'.</msg>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20131216 04:55:26.329" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20131216 04:55:26.329" starttime="20131216 04:55:26.142"></status>
+</kw>
+<msg timestamp="20131216 04:55:26.331" level="FAIL">Element 'id=notify1' should have contained text 'Còn 15 học sinh chưa đủ điểm' but its text was 'Đã có đủ điểm và hạnh kiểm của cả lớp'.</msg>
+<status status="FAIL" endtime="20131216 04:55:26.331" starttime="20131216 04:55:26.119"></status>
+</kw>
+<status status="FAIL" endtime="20131216 04:55:26.331" starttime="20131216 04:55:26.118"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20131216 04:55:26.332" critical="yes" starttime="20131216 04:55:17.164">Element 'id=notify1' should have contained text 'Còn 15 học sinh chưa đủ điểm' but its text was 'Đã có đủ điểm và hạnh kiểm của cả lớp'.</status>
+</test>
+<test id="s1-t3" name="Test Case3 Full data">
+<kw type="kw" name="Keyword.Upload full data file for subject Ngu Van not need update">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/school/viewClassDetail/1502</arg>
+</arguments>
+<msg timestamp="20131216 04:55:26.336" level="INFO">Clicking link '/school/viewClassDetail/1502'.</msg>
+<status status="PASS" endtime="20131216 04:55:27.049" starttime="20131216 04:55:26.336"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>btn-diem</arg>
+</arguments>
+<msg timestamp="20131216 04:55:27.051" level="INFO">Clicking link 'btn-diem'.</msg>
+<status status="PASS" endtime="20131216 04:55:27.755" starttime="20131216 04:55:27.050"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Select From List">
+<doc>Selects `*items` from list identified by `locator`</doc>
+<arguments>
+<arg>subject</arg>
+<arg>21198</arg>
+</arguments>
+<msg timestamp="20131216 04:55:27.755" level="INFO">Selecting option(s) '21198' from list 'subject'.</msg>
+<status status="PASS" endtime="20131216 04:55:28.649" starttime="20131216 04:55:27.755"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>mark-menu</arg>
+</arguments>
+<msg timestamp="20131216 04:55:28.649" level="INFO">Clicking link 'mark-menu'.</msg>
+<status status="PASS" endtime="20131216 04:55:28.725" starttime="20131216 04:55:28.649"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>import</arg>
+</arguments>
+<msg timestamp="20131216 04:55:28.726" level="INFO">Clicking link 'import'.</msg>
+<status status="PASS" endtime="20131216 04:55:28.808" starttime="20131216 04:55:28.726"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>upload_modal</arg>
+</arguments>
+<status status="PASS" endtime="20131216 04:55:29.079" starttime="20131216 04:55:28.808"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Choose File">
+<doc>Inputs the `file_path` into file input field found by `identifier`.</doc>
+<arguments>
+<arg>files[]</arg>
+<arg>C:\\Users\\FreeSky\\Desktop\\Test KT${/}bangdiem10A1.xls</arg>
+</arguments>
+<status status="PASS" endtime="20131216 04:55:29.166" starttime="20131216 04:55:29.080"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Tải lên</arg>
+</arguments>
+<status status="PASS" endtime="20131216 04:55:29.226" starttime="20131216 04:55:29.167"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id='fileupload']/table/tbody/tr/td[5]/button</arg>
+</arguments>
+<msg timestamp="20131216 04:55:29.227" level="INFO">Clicking button 'xpath=//*[@id='fileupload']/table/tbody/tr/td[5]/button'.</msg>
+<status status="PASS" endtime="20131216 04:55:29.342" starttime="20131216 04:55:29.226"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>upload-modal-exit</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20131216 04:55:29.977" starttime="20131216 04:55:29.342"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>upload-modal-exit</arg>
+</arguments>
+<msg timestamp="20131216 04:55:29.978" level="INFO">Clicking link 'upload-modal-exit'.</msg>
+<status status="PASS" endtime="20131216 04:55:30.067" starttime="20131216 04:55:29.977"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Browser Implicit Wait">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20131216 04:55:32.288" starttime="20131216 04:55:30.068"></status>
+</kw>
+<status status="PASS" endtime="20131216 04:55:32.288" starttime="20131216 04:55:26.335"></status>
+</kw>
+<kw type="kw" name="Keyword.Select Classes To View Details">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/school/viewClassDetail/1502</arg>
+</arguments>
+<msg timestamp="20131216 04:55:32.290" level="INFO">Clicking link '/school/viewClassDetail/1502'.</msg>
+<status status="PASS" endtime="20131216 04:55:33.043" starttime="20131216 04:55:32.290"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Location Should Be">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${HOST}/school/viewClassDetail/1502</arg>
+</arguments>
+<msg timestamp="20131216 04:55:33.052" level="INFO">Current location is 'http://truongnha.com/school/viewClassDetail/1502'.</msg>
+<status status="PASS" endtime="20131216 04:55:33.052" starttime="20131216 04:55:33.044"></status>
+</kw>
+<status status="PASS" endtime="20131216 04:55:33.052" starttime="20131216 04:55:32.289"></status>
+</kw>
+<kw type="kw" name="Keyword.Select Sum Up Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>btn-tongket</arg>
+</arguments>
+<msg timestamp="20131216 04:55:33.053" level="INFO">Clicking link 'btn-tongket'.</msg>
+<status status="PASS" endtime="20131216 04:55:33.778" starttime="20131216 04:55:33.053"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Location Should Be">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${HOST}/school/xepLoaiHlTheoLop/1502/1</arg>
+</arguments>
+<msg timestamp="20131216 04:55:33.785" level="INFO">Current location is 'http://truongnha.com/school/xepLoaiHlTheoLop/1502/1'.</msg>
+<status status="PASS" endtime="20131216 04:55:33.785" starttime="20131216 04:55:33.778"></status>
+</kw>
+<status status="PASS" endtime="20131216 04:55:33.785" starttime="20131216 04:55:33.053"></status>
+</kw>
+<kw type="kw" name="Keyword.Select Button Sum Up">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>tinhtrungbinh</arg>
+</arguments>
+<msg timestamp="20131216 04:55:33.787" level="INFO">Clicking link 'tinhtrungbinh'.</msg>
+<status status="PASS" endtime="20131216 04:55:34.788" starttime="20131216 04:55:33.787"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Location Should Be">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${HOST}/school/xepLoaiHlTheoLop/1502/1/1</arg>
+</arguments>
+<msg timestamp="20131216 04:55:34.797" level="INFO">Current location is 'http://truongnha.com/school/xepLoaiHlTheoLop/1502/1/1'.</msg>
+<status status="PASS" endtime="20131216 04:55:34.797" starttime="20131216 04:55:34.789"></status>
+</kw>
+<status status="PASS" endtime="20131216 04:55:34.797" starttime="20131216 04:55:33.786"></status>
+</kw>
+<kw type="kw" name="Keyword.Page should contain POP UP da co du diem va hanh kiem cua ca lop">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Element Should Contain">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>id=notify1</arg>
+<arg>Đã có đủ điểm và hạnh kiểm của cả lớp</arg>
+</arguments>
+<msg timestamp="20131216 04:55:34.799" level="INFO">Verifying element 'id=notify1' contains text 'Đã có đủ điểm và hạnh kiểm của cả lớp'.</msg>
+<status status="PASS" endtime="20131216 04:55:34.822" starttime="20131216 04:55:34.798"></status>
+</kw>
+<status status="PASS" endtime="20131216 04:55:34.823" starttime="20131216 04:55:34.797"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20131216 04:55:34.823" critical="yes" starttime="20131216 04:55:26.333"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20131216 04:55:34.825" starttime="20131216 04:55:09.808"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="2">Critical Tests</stat>
+<stat fail="1" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" pass="2" id="s1" name="ClassTest">ClassTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

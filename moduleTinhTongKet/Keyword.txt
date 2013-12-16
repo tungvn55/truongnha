@@ -1,0 +1,78 @@
+*** Settings ***
+Library       		Selenium2Library
+
+
+*** Variables ***
+${LOGIN ADDRESS}	http://truongnha.com/login/
+${BROWSER}			ff
+${HOST}				http://truongnha.com
+${WELCOME PAGE}		${HOST}/school/
+${VIEW CLASSES}		${HOST}/school/viewClassDetail
+${VIEW SUBJECTS}	${HOST}/school/subjectPerClass
+${SUBJECT DETAIL}	${HOST}/school/viewSubjectDetail
+
+*** Keywords ***
+Open Login Page
+	Open Browser  ${LOGIN ADDRESS}  ${BROWSER}
+	
+Input Username  [Arguments]  ${username}
+    Input Text  id_username  ${username}
+
+Input Password  [Arguments]  ${password}
+    Input Text  id_password  ${password}
+
+Submit Login
+	Click Button  login
+	
+Login is Successful
+	Location Should Be 	${WELCOME PAGE}
+
+Login
+	Open Browser  ${LOGIN ADDRESS}  ${BROWSER}
+	Input Text  id_username	tungvn
+	Input Text  id_password	nhom14
+	Click Button  login
+	Location Should Be 	${WELCOME PAGE}
+
+Go To Home Page
+	Go To	${WELCOME PAGE}
+
+Select Classes To View Details
+	Click Link  /school/viewClassDetail/1502
+	Location Should Be 	${HOST}/school/viewClassDetail/1502
+Select Sum Up Page
+	Click Link  btn-tongket
+	Location Should Be  ${HOST}/school/xepLoaiHlTheoLop/1502/1	
+Select Button Sum Up
+	Click Link  tinhtrungbinh 	
+	Location Should Be  ${HOST}/school/xepLoaiHlTheoLop/1502/1/1
+Page should contain POP UP da co du diem va hanh kiem cua ca lop
+	Element Should Contain 	id=notify1 	Đã có đủ điểm và hạnh kiểm của cả lớp
+Page should contain POP UP con 15 hoc sinh chua du diem
+	Element Should Contain 	id=notify1	Còn 15 học sinh chưa đủ điểm	
+Upload no data file for subject Ngu Van need update
+	CLick Link	/school/viewClassDetail/1502
+	Click Link	btn-diem
+	Select from list	subject 	21198
+	Click Link	mark-menu
+	Click Link	import	
+	Wait Until Element Is Visible	upload_modal
+	Choose File 	files[]	${CURDIR}${/}bangdiem10A1nodata.xls
+	Wait Until Page Contains	Tải lên
+	Click Button	xpath=//*[@id='fileupload']/table/tbody/tr/td[5]/button
+	Wait Until Page Contains	Cập nhật
+	Click Button 	update
+	Wait Until Element Is Visible	upload-modal-exit	5
+	Click Link	upload-modal-exit
+Upload full data file for subject Ngu Van not need update	
+	CLick Link	/school/viewClassDetail/1502
+	Click Link	btn-diem
+	Select from list	subject 	21198
+	Click Link	mark-menu
+	Click Link	import	
+	Wait Until Element Is Visible	upload_modal
+	Choose File 	files[]	${CURDIR}${/}bangdiem10A1.xls
+	Wait Until Page Contains	Tải lên
+	Click Button	xpath=//*[@id='fileupload']/table/tbody/tr/td[5]/button
+	Wait Until Element Is Visible	upload-modal-exit	5
+	Click Link	upload-modal-exit

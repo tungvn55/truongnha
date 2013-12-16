@@ -9,3 +9,8 @@
 	easy_install decorator
 	easy_install docutils
 	Như vậy ta đã hoàn thành quá trình cài đặt.
+Để chạy các test case cho các module, tiến hành:
+	Mở giao diện command line.
+	Dịch chuyển đến thư mục chứa các file ClassTest.txt.
+	Chạy lệnh "pybot ClassTest.txt" (không bao gồm dấu "...")
+	Xem kết quả.

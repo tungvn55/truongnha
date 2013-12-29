@@ -64,6 +64,10 @@ Upload no data file for subject Ngu Van need update
 	Click Button 	update
 	Wait Until Element Is Visible	upload-modal-exit	5
 	Click Link	upload-modal-exit
+	Set Browser Implicit Wait	5 seconds
+	Wait Until Element Is Visible	messageChanging	
+	Location Should Be 	${HOST}/school/markTable/196/1502/21198
+	Set Browser Implicit Wait	3 seconds
 Upload full data file for subject Ngu Van not need update	
 	CLick Link	/school/viewClassDetail/1502
 	Click Link	btn-diem
@@ -76,3 +80,7 @@ Upload full data file for subject Ngu Van not need update
 	Click Button	xpath=//*[@id='fileupload']/table/tbody/tr/td[5]/button
 	Wait Until Element Is Visible	upload-modal-exit	5
 	Click Link	upload-modal-exit
+	Set Browser Implicit Wait	5 seconds
+	Wait Until Page Contains	Đã lưu
+	Location Should Be 	${HOST}/school/markTable/196/1502/21198
+	Set Browser Implicit Wait	3 seconds
